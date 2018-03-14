@@ -15,6 +15,12 @@
       "label": "Clean",
       "type": "process",
       "command": "latexmk -C",
+    },
+    {
+      "label": "Run in Python",
+      "command": "python",
+      "args": ["${relativeFile}"],
+      "presentation": {"panel": "new"},
     }
   ]
 }

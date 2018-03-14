@@ -86,7 +86,7 @@
 \end{coverpages}
 
 % Print answers
-\printanswers
+% \printanswers
 
 \begin{document}
 
@@ -99,7 +99,7 @@ The following exercises are related to the Python programming language~\cite{pyt
 Write a function \mintinline{python}{sumultiply} that takes two integer arguments and returns their product.
 The function should not use the \mintinline{python}{*} or \mintinline{python}{/} operators.
 For example:
-\begin{minted}{scheme}
+\begin{minted}{python}
 > sumultiply(11, 13)
 143
 > sumultiply(5, 123)
@@ -112,10 +112,11 @@ True
   \end{minted}
 \end{solution}
 
+
 \question
-Write a function \mintinline{python}{ispalindrome} that takes a string and returns \mintinline{python}{True} if the string is a palindrome and \mintinline{False} otherwise.
+Write a function \mintinline{python}{ispalindrome} that takes a string and returns \mintinline{python}{True} if the string is a palindrome and \mintinline{python}{False} otherwise.
 For example:
-\begin{minted}{scheme}
+\begin{minted}{python}
 > ispalindrome("radar")
 True
 > ispalindrome("radars")
@@ -128,12 +129,43 @@ True
   \end{minted}
 \end{solution}
 
+
 \question
-Write a function \mintinline{python}{newtonsroot} that takes a number $x$ and returns its square root correct to six decimal places as calculated by Newton's method.
-Newton's method is to make an initial (random) guess $r_0$ at the square root, and to repeatedly improve it as follows:
+Write a function \mintinline{python}{simpleinterest} that, for a loan with simple interest, takes a principal amount $p$, an interest rate $r$, and a number of periods, and returns the total amount repaid. 
+\begin{minted}{python}
+> simpleinterest(1000, 3, 5)
+1150.0
+> simpleinterest(1000, 7, 10)
+1700.0
+\end{minted}
+
+\begin{solution}
+  \inputminted{python}{solutions/simpleinterest.py}
+\end{solution}
+
+
+\question
+Write a function \mintinline{python}{compoundinterest} that, for a loan with compound interest, takes a principal amount $p$, an interest rate $r$, and a number of periods, and returns the total amount repaid. 
+\begin{minted}{python}
+> compoundinterest(1000, 5, 10)
+1628.89
+> compoundinterest(1000, 7, 5)
+1967.15
+\end{minted}
+
+\begin{solution}
+  \begin{minted}{python}
+True
+  \end{minted}
+\end{solution}
+
+
+\question
+Write a function \mintinline{python}{newtonsroot} that takes a number \( x \) and returns its square root correct to six decimal places as calculated by Newton's method.
+Newton's method is to make an initial (random) guess \( r_0 \) at the square root, and to repeatedly improve it as follows:
 \[ r_{i+1} = r_i - \frac{r_i^2 - x}{2 r_i} \]
 For example:
-\begin{minted}{scheme}
+\begin{minted}{python}
 > newtonsroot(100)
 10.0
 > newtonsroot(144)
@@ -146,6 +178,85 @@ True
   \end{minted}
 \end{solution}
 
+
+\question
+Write a function \mintinline{python}{pitondecs} that takes an integer \( n \) and returns \( \pi \) correct to \( n \) decimal places.
+For example:
+\begin{minted}{python}
+> pitondecs(2)
+3.14
+> pitondecs(6)
+3.141593
+\end{minted}
+
+\begin{solution}
+  \begin{minted}{python}
+True
+  \end{minted}
+\end{solution}
+
+
+\question
+Write a function \mintinline{python}{etondecs} that takes an integer \( n \) and returns \( \epsilon \) correct to \( n \) decimal places.
+For example:
+\begin{minted}{python}
+> etondecs(2)
+2.72
+> etondecs(6)
+2.718282
+\end{minted}
+
+\begin{solution}
+  \begin{minted}{python}
+True
+  \end{minted}
+\end{solution}
+
+\question
+Write a function \mintinline{python}{caesar} that takes a string and an integer $n$ and returns the string with each letter shifted $n$ places in the alphabet.
+For example:
+\begin{minted}{python}
+> caesar('abcd', 3)
+'defg'
+> caesar('Hello, world!', 2)
+'Jgnnq, yqtnf!'
+\end{minted}
+
+
+\question
+Write a function \mintinline{python}{sortlist} that takes a list of integers and returns a copy of it sorted.
+Note that Python has a built-in sort function, but try to solve this problem without using it.
+For example:
+\begin{minted}{python}
+> sortlist([3,1,2])
+[1,2,3]
+> sortlist([10,-9,5,-1,0])
+[-9,-1,0,5,10]
+\end{minted}
+
+\begin{solution}
+  \begin{minted}{python}
+True
+  \end{minted}
+\end{solution}
+
+
+\question
+Write a function \mintinline{python}{countstr} that takes string and returns, for each character in the string, the number of times the character is contained in it.
+You might use a dictionary for this purpose.
+For example:
+\begin{minted}{python}
+> countstr('aaacbb')
+{'a': 3,'c': 1,'b': 2}
+> countstr('Hello, world!')
+{'H': 1,'e': 1,'l': 3,'o': 2,',': 1,' ': 1,'w': 1,'r': 1,'d': 1,'!': 1}
+\end{minted}
+
+\begin{solution}
+  \begin{minted}{python}
+True
+  \end{minted}
+\end{solution}
 
 
 \end{questions}
