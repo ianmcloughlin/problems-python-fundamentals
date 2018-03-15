@@ -10,10 +10,11 @@ def pitondecs(n):
   # Calculate the next approximation of pi.
   ap = pi + (8.0 / (((4.0 * i) + 1) * ((4.0 * i) + 3.0)))
   # Calculate the minimum change in guesses.
-  d = 1.0 / 10**(n+1)
+  d = 1.0 / 10**(3*n)
   # Keep looping until the difference between the current guess
   # and the next guess is less than 0.000001.
-  # Warning: this doesn't converge quick enough.
+  # Warning: this doesn't converge quickly enough in general.
+  # See:https://math.stackexchange.com/a/14179
   while abs(pi - ap) >= d:
     # Increase i by 1.
     i = i + 1

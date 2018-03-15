@@ -12,14 +12,17 @@
       }
     },
     {
-      "label": "Clean",
+      "label": "Clean all",
       "type": "process",
-      "command": "latexmk -C",
+      "command": "latexmk -c",
+      "problemMatcher": []
     },
     {
       "label": "Run in Python",
       "command": "python",
-      "args": ["${relativeFile}"],
+      "args": [
+        "${relativeFile}"
+      ]
     }
   ]
 }
