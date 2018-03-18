@@ -13,7 +13,7 @@ def caesar(s, n):
       # If the new character has gone beyond 'z'.
       if newcord > ord('z'):
         # Then wrap it back around to 'a'.
-        newcord = newcord - ord('z') + ord('a')
+        newcord = newcord - ord('z') + ord('a') - 1
       # Update the character in the string.
       s[i] = chr(newcord)
         # Check if the character is an uppercase letter.
@@ -23,7 +23,7 @@ def caesar(s, n):
       # If the new character has gone beyond 'Z'.
       if newcord > ord('Z'):
         # Then wrap it back around to 'a'.
-        newcord = newcord - ord('Z') + ord('A')
+        newcord = newcord - ord('Z') + ord('A') - 1
       # Update the character in the string.
       s[i] = chr(newcord)
   # Return the updated string.
@@ -32,3 +32,4 @@ def caesar(s, n):
 # Tests from question.
 print(caesar('abcd', 3))
 print(caesar('Hello, world!', 2))
+print(caesar('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 2))
