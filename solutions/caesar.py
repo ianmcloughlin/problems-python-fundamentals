@@ -32,4 +32,6 @@ def caesar(s, n):
 # Tests from question.
 print(caesar('abcd', 3))
 print(caesar('Hello, world!', 2))
-print(caesar('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ', 2))
+
+# All the lowercase letters.
+print(caesar('abcdefghijklmnopqrstuvwxyz', 2))
